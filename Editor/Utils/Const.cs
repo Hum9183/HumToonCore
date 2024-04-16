@@ -18,8 +18,8 @@ namespace Hum.HumToonCore.Editor.Utils
         public static readonly string Other         = Decorate(nameof(Other));
 
         public static readonly string ColorChannelR    = "(R)";
-        public static readonly string ColorChannelRBG  = "(RGB)";
-        public static readonly string ColorChannelRGBA = "(RGBA)";
+        public static readonly string ColorChannelRbg  = "(RGB)";
+        public static readonly string colorChannelRgba = "(RGBA)";
 
         private static string Decorate(string inStr)
         {

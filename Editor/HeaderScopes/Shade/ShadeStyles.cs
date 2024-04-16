@@ -38,7 +38,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{ShadeKeywordNames._HUM_USE_FIRST_SHADE}");
 
         public static readonly GUIContent FirstShadeMap = EditorGUIUtility.TrTextContent(
-            text: $"First Shade Map {C.ColorChannelRBG}",
+            text: $"First Shade Map {C.ColorChannelRbg}",
             tooltip: $"{C.Description}{C.Ln}" +
                      $"{DescriptionIfIsNot}{C.Ln}" +
                      $"{C.Ln}" +
@@ -86,7 +86,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{ShadeKeywordNames._HUM_USE_SECOND_SHADE}");
 
         public static readonly GUIContent SecondShadeMap = EditorGUIUtility.TrTextContent(
-            text: $"Second Shade Map {C.ColorChannelRBG}",
+            text: $"Second Shade Map {C.ColorChannelRbg}",
             tooltip:  $"{C.Description}{C.Ln}" +
                       $"{DescriptionIfIsNot}{C.Ln}" +
                       $"{C.Ln}" +

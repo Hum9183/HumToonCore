@@ -19,7 +19,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Base
 
         public static GUIContent BaseMap =>
             EditorGUIUtility.TrTextContent(
-                text: $"{L.Select(new string[] { "BaseMap", "ベースマップ", "基础贴图" })} {C.ColorChannelRGBA}",
+                text: $"{L.Select(new string[] { "BaseMap", "ベースマップ", "基础贴图" })} {C.colorChannelRgba}",
                 tooltip: $"{C.Description}{C.Ln}" +
                          $"Specifies the base Material and/or Color of the surface. " +
                          $"If you’ve selected Transparent or Alpha Clipping under Surface Options, " +
