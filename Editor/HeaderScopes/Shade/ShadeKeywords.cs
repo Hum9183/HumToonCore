@@ -6,6 +6,7 @@ using Hum.HumToonCore.Editor.Utils;
 using UnityEngine;
 using UnityEngine.Rendering;
 using ID = Hum.HumToonCore.Editor.HeaderScopes.Shade.ShadePropertiesID;
+// ReSharper disable InconsistentNaming
 
 namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
 {

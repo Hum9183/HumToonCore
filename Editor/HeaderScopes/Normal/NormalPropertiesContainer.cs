@@ -1,4 +1,5 @@
 using UnityEditor;
+// ReSharper disable UnassignedField.Global
 
 namespace Hum.HumToonCore.Editor.HeaderScopes.Normal
 {

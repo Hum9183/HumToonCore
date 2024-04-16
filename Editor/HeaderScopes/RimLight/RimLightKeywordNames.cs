@@ -1,3 +1,4 @@
+// ReSharper disable InconsistentNaming
 namespace Hum.HumToonCore.Editor.HeaderScopes.RimLight
 {
     public static class RimLightKeywordNames

@@ -14,6 +14,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.SurfaceOptions
         private static readonly int IDReceiveShadows       = Shader.PropertyToID($"{nameof(P.ReceiveShadows).Prefix()}");
         private static readonly int IDCullMode             = Shader.PropertyToID($"{nameof(P.CullMode).Prefix()}");
         private static readonly int IDAlphaToMask          = Shader.PropertyToID(HumToonPropertyNames.AlphaToMask);
+        // ReSharper disable once InconsistentNaming
         private static readonly int IDZWrite               = Shader.PropertyToID(HumToonPropertyNames.ZWrite);
         private static readonly int IDQueueOffset          = Shader.PropertyToID(HumToonPropertyNames.QueueOffset);
 
