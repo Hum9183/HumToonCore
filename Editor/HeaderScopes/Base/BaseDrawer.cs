@@ -11,7 +11,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Base
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             materialEditor.TexturePropertySingleLine(BaseStyles.BaseMap, PropContainer.BaseMap, PropContainer.BaseColor);
             materialEditor.TextureScaleOffsetProperty(PropContainer.BaseMap);

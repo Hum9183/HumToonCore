@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.SurfaceOptions
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             SurfaceType surfaceType = HumToonGUIUtils.DoPopup<SurfaceType>(materialEditor, PropContainer.SurfaceType, SurfaceOptionsStyles.SurfaceType);
 

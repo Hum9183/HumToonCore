@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             DrawMainLight(materialEditor);
             HumToonGUIUtils.Space();

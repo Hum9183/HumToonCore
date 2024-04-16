@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             ShadeMode shadeMode = HumToonGUIUtils.DoPopup<ShadeMode>(materialEditor, PropContainer.ShadeMode, ShadeStyles.ShadeMode);
 

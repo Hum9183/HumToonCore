@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.RimLight
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             bool useRimLight = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseRimLight, RimLightStyles.UseRimLight);
             if (useRimLight)

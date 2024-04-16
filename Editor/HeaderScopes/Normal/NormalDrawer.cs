@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Normal
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             var normalMap = PropContainer.BumpMap;
             var normalScale = PropContainer.BumpScale;

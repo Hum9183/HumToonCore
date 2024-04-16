@@ -32,13 +32,20 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
 
         public void Draw(MaterialEditor materialEditor)
         {
-            using var header = new MaterialHeaderScope(_headerStyleFunc?.Invoke(), _expandable, materialEditor); // NOTE: Draw header
-            if (header.expanded is false)
+            bool expanded = DrawHeader(materialEditor);
+            if (expanded is false)
                 return;
 
-            DrawInternal(materialEditor);
+            DrawMain(materialEditor);
         }
 
-        protected abstract void DrawInternal(MaterialEditor materialEditor);
+        protected abstract void DrawMain(MaterialEditor materialEditor);
+
+        /// <returns>ヘッダーが広がっているかどうか</returns>
+        private bool DrawHeader(MaterialEditor materialEditor)
+        {
+            using var header = new MaterialHeaderScope(_headerStyleFunc?.Invoke(), _expandable, materialEditor);
+            return header.expanded;
+        }
     }
 }

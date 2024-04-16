@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.MatCap
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             bool useMarCap = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseMatCap, MatCapStyles.UseMatCap);
             if (useMarCap)

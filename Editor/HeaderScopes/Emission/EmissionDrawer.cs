@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Emission
         {
         }
 
-        protected override void DrawInternal(MaterialEditor materialEditor)
+        protected override void DrawMain(MaterialEditor materialEditor)
         {
             bool useFirstEmission = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseEmission, EmissionStyles.UseEmission);
             if (useFirstEmission)
