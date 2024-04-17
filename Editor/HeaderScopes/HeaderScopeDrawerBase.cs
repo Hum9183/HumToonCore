@@ -32,8 +32,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
 
         public void Draw(MaterialEditor materialEditor)
         {
-            bool expanded = DrawHeader(materialEditor);
-            if (expanded is false)
+            using var materialHeaderScope = DrawHeader(materialEditor);
+            if (materialHeaderScope.expanded is false)
                 return;
 
             DrawMain(materialEditor);
@@ -41,11 +41,9 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
 
         protected abstract void DrawMain(MaterialEditor materialEditor);
 
-        /// <returns>ヘッダーが広がっているかどうか</returns>
-        private bool DrawHeader(MaterialEditor materialEditor)
+        private MaterialHeaderScope DrawHeader(MaterialEditor materialEditor)
         {
-            using var header = new MaterialHeaderScope(_headerStyleFunc?.Invoke(), _expandable, materialEditor);
-            return header.expanded;
+            return new MaterialHeaderScope(_headerStyleFunc?.Invoke(), _expandable, materialEditor);
         }
     }
 }
