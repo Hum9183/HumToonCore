@@ -16,7 +16,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.SurfaceOptions
     {
         public static GUIContent SurfaceOptionsFoldout =>
             EditorGUIUtility.TrTextContent(
-                text: $"{L.Select(new string[] { "Surface Options", "サーフェス設定", "表面选项" })}",
+                text: $"{L.Select(new string[] { "Surface Options", "サーフェス設定", "表面设置" })}",
                 tooltip: $"{C.Description}{C.Ln}" +
                          $"Controls how URP Renders the material on screen.");
 
