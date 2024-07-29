@@ -11,7 +11,8 @@ namespace Hum.HumToonCore.Editor.Language
 
         private static int DrawInternal(Language currentLang)
         {
-            int newValue = EditorGUILayout.Popup(LanguageStyles.Language, (int)currentLang, LanguageDisplayedOptionsGetter.Get<Language>(currentLang));
+            var displayedOptions = new string[] { "English", "日本語", "简体中文" };
+            int newValue = EditorGUILayout.Popup(LanguageStyles.Language, (int)currentLang, displayedOptions);
             return newValue;
         }
     }
