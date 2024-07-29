@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
     {
         public static GUIContent LightFoldout =>
             EditorGUIUtility.TrTextContent(
-                text: $"{L.Select(new string[] { "Light", "ライト", "光照" })}",
+                text: $"{L.Select(new string[] { "Realtime Lighting", "リアルタイムライト", "实时光照" })}",
                 tooltip: String.Empty);
 
         public static readonly GUIContent MainLightColorWeight = EditorGUIUtility.TrTextContent(
