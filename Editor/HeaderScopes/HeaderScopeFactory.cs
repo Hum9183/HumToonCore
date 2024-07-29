@@ -45,7 +45,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 (CreateRimLightDrawer(), new RimLightValidator()),
                 (CreateEmissionDrawer(), new EmissionValidator()),
                 (CreateMatCapDrawer(), new MatCapValidator()),
-                (CreateLightDrawer(), null),
+                (CreateLightDrawer(), new LightValidator()),
                 (CreateGIDrawer(), new GIValidator()),
             };
         }

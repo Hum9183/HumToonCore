@@ -10,6 +10,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         public MaterialProperty MainLightUpperLimit;
         public MaterialProperty UseMainLightLowerLimit;
         public MaterialProperty MainLightLowerLimit;
+        public MaterialProperty UseMainLightCookieAsShade;
         public MaterialProperty AdditionalLightsColorWeight;
     }
 }

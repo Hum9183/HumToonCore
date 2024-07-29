@@ -27,6 +27,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                 materialEditor.ShaderProperty(PropContainer.MainLightColorWeight, LightStyles.MainLightColorWeight);
                 HumToonGUIUtils.FloatToggleAndRangePropertiesSingleLine(materialEditor,PropContainer.UseMainLightUpperLimit, PropContainer.MainLightUpperLimit, LightStyles.MainLightUpperLimit);
                 HumToonGUIUtils.FloatToggleAndRangePropertiesSingleLine(materialEditor,PropContainer.UseMainLightLowerLimit, PropContainer.MainLightLowerLimit, LightStyles.MainLightLowerLimit);
+                HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseMainLightCookieAsShade, LightStyles.UseMainLightCookieAsShade);
             }
         }
 

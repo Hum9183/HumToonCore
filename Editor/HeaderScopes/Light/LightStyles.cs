@@ -32,6 +32,14 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                      $"{nameof(P.UseMainLightLowerLimit).Prefix()}{C.Ln}" +
                      $"{nameof(P.MainLightLowerLimit).Prefix()}");
 
+        public static readonly GUIContent UseMainLightCookieAsShade = EditorGUIUtility.TrTextContent(
+            text: "Use Light Cookie As Shade",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(P.UseMainLightCookieAsShade).Prefix()}{C.Ln}" +
+                     $"{C.Ln}" +
+                     $"{C.Keyword}{C.Ln}" +
+                     $"{LightKeywordNames._HUM_USE_MAIN_LIGHT_COOKIE_AS_SHADE}");
+
         public static readonly GUIContent AdditionalLightsColorWeight = EditorGUIUtility.TrTextContent(
             text: "Weight",
             tooltip: $"{C.Property}{C.Ln}" +
