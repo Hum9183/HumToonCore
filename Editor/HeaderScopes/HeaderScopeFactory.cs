@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Hum.HumToonCore.Editor.HeaderScopes.Base;
 using Hum.HumToonCore.Editor.HeaderScopes.Emission;
-using Hum.HumToonCore.Editor.HeaderScopes.GI;
 using Hum.HumToonCore.Editor.HeaderScopes.Light;
 using Hum.HumToonCore.Editor.HeaderScopes.MatCap;
 using Hum.HumToonCore.Editor.HeaderScopes.Normal;
@@ -46,7 +45,6 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 (CreateEmissionDrawer(), new EmissionValidator()),
                 (CreateMatCapDrawer(), new MatCapValidator()),
                 (CreateLightDrawer(), new LightValidator()),
-                (CreateGIDrawer(), new GIValidator()),
             };
         }
 
@@ -112,14 +110,6 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 new LightPropertiesContainer(),
                 () => LightStyles.LightFoldout,
                 Convert.ToUInt32(Expandable.Light));
-        }
-
-        private GIDrawer CreateGIDrawer()
-        {
-            return new GIDrawer(
-                new GIPropertiesContainer(),
-                () => GIStyles.GIFoldout,
-                Convert.ToUInt32(Expandable.GI));
         }
     }
 }

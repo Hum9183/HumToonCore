@@ -12,7 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
     {
         public static GUIContent LightFoldout =>
             EditorGUIUtility.TrTextContent(
-                text: $"{L.Select(new string[] { "Realtime Lighting", "リアルタイムライト", "实时光照" })}",
+                text: $"{L.Select(new string[] { "Lighting", "ライティング", "光照" })}",
                 tooltip: String.Empty);
 
         public static readonly GUIContent MainLightColorWeight = EditorGUIUtility.TrTextContent(
@@ -44,5 +44,18 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             text: "Weight",
             tooltip: $"{C.Property}{C.Ln}" +
                      $"{nameof(P.AdditionalLightsColorWeight).Prefix()}");
+
+        public static readonly GUIContent ReceiveGI = EditorGUIUtility.TrTextContent(
+            "Receive GI",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.ReceiveGI).Prefix()}{C.Ln}" +
+            $"{C.Ln}" +
+            $"{C.Keyword}{C.Ln}" +
+            $"{LightKeywordNames._HUM_RECEIVE_GI}");
+
+        public static readonly GUIContent GIColorWeight = EditorGUIUtility.TrTextContent(
+            "Weight",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.GIColorWeight).Prefix()}");
     }
 }

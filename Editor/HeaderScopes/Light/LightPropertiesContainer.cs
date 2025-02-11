@@ -12,5 +12,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         public MaterialProperty MainLightLowerLimit;
         public MaterialProperty UseMainLightCookieAsShade;
         public MaterialProperty AdditionalLightsColorWeight;
+        public MaterialProperty GIColorWeight;
+        public MaterialProperty ReceiveGI;
     }
 }

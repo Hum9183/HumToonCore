@@ -2,6 +2,7 @@ using System;
 using Hum.HumToonCore.Editor.Utils;
 using UnityEditor;
 using UnityEngine;
+using L = Hum.HumToonCore.Editor.Language.LanguageSelector;
 
 namespace Hum.HumToonCore.Editor.HeaderScopes.Light
 {
@@ -17,6 +18,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             DrawMainLight(materialEditor);
             HumToonGUIUtils.Space();
             DrawAdditionalLights(materialEditor);
+            HumToonGUIUtils.Space();
+            DrawGI(materialEditor);
         }
 
         private void DrawMainLight(MaterialEditor materialEditor)
@@ -37,6 +40,22 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             using (new EditorGUI.IndentLevelScope())
             {
                 materialEditor.ShaderProperty(PropContainer.AdditionalLightsColorWeight, LightStyles.AdditionalLightsColorWeight);
+            }
+        }
+
+        private void DrawGI(MaterialEditor materialEditor)
+        {
+            EditorGUILayout.LabelField(L.Select(new[] { "GI", "GI", "全局光照" }), EditorStyles.boldLabel);
+            using (new EditorGUI.IndentLevelScope())
+            {
+                var useMarCap = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.ReceiveGI, LightStyles.ReceiveGI);
+                if (useMarCap)
+                {
+                    using (new EditorGUI.IndentLevelScope())
+                    {
+                        materialEditor.ShaderProperty(PropContainer.GIColorWeight, LightStyles.GIColorWeight);
+                    }
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
     public class LightValidator : IHeaderScopeValidator
     {
         private static readonly int IDUseMainLightCookieAsShade = Shader.PropertyToID(nameof(P.UseMainLightCookieAsShade).Prefix());
+        private static readonly int IDReceiveGI = Shader.PropertyToID(nameof(P.ReceiveGI).Prefix());
 
         public void Validate(Material material)
         {
@@ -18,6 +19,9 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         {
             bool useMainLightCookieAsShade = material.GetFloat(IDUseMainLightCookieAsShade).ToBool();
             CoreUtils.SetKeyword(material, LightKeywordNames._HUM_USE_MAIN_LIGHT_COOKIE_AS_SHADE, useMainLightCookieAsShade);
+
+            bool receiveGI = material.GetFloat(IDReceiveGI).ToBool();
+            CoreUtils.SetKeyword(material, LightKeywordNames._HUM_RECEIVE_GI, receiveGI);
         }
     }
 }
