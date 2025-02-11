@@ -40,6 +40,19 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                      $"{C.Keyword}{C.Ln}" +
                      $"{LightKeywordNames._HT_USE_MAIN_LIGHT_COOKIE_AS_SHADE}");
 
+        public static readonly GUIContent UseMainLightSpecular = EditorGUIUtility.TrTextContent(
+            text: "Use Specular",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(P.UseMainLightSpecular).Prefix()}{C.Ln}" +
+                     $"{C.Ln}" +
+                     $"{C.Keyword}{C.Ln}" +
+                     $"{LightKeywordNames._HT_USE_MAIN_LIGHT_SPECULAR}");
+
+        public static readonly GUIContent MainLightSpecularIntensity = EditorGUIUtility.TrTextContent(
+            "Intensity",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.MainLightSpecularIntensity).Prefix()}");
+
         public static readonly GUIContent AdditionalLightsColorWeight = EditorGUIUtility.TrTextContent(
             text: "Weight",
             tooltip: $"{C.Property}{C.Ln}" +

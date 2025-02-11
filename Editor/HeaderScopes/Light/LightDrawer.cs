@@ -31,6 +31,15 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                 HumToonGUIUtils.FloatToggleAndRangePropertiesSingleLine(materialEditor,PropContainer.UseMainLightUpperLimit, PropContainer.MainLightUpperLimit, LightStyles.MainLightUpperLimit);
                 HumToonGUIUtils.FloatToggleAndRangePropertiesSingleLine(materialEditor,PropContainer.UseMainLightLowerLimit, PropContainer.MainLightLowerLimit, LightStyles.MainLightLowerLimit);
                 HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseMainLightCookieAsShade, LightStyles.UseMainLightCookieAsShade);
+
+                var useMainLightSpecular = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseMainLightSpecular, LightStyles.UseMainLightSpecular);
+                if (useMainLightSpecular)
+                {
+                    using (new EditorGUI.IndentLevelScope())
+                    {
+                        materialEditor.ShaderProperty(PropContainer.MainLightSpecularIntensity, LightStyles.MainLightSpecularIntensity);
+                    }
+                }
             }
         }
 
