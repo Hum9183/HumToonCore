@@ -38,7 +38,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                      $"{nameof(P.UseMainLightCookieAsShade).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{LightKeywordNames._HUM_USE_MAIN_LIGHT_COOKIE_AS_SHADE}");
+                     $"{LightKeywordNames._HT_USE_MAIN_LIGHT_COOKIE_AS_SHADE}");
 
         public static readonly GUIContent AdditionalLightsColorWeight = EditorGUIUtility.TrTextContent(
             text: "Weight",
@@ -51,7 +51,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             $"{nameof(P.ReceiveGI).Prefix()}{C.Ln}" +
             $"{C.Ln}" +
             $"{C.Keyword}{C.Ln}" +
-            $"{LightKeywordNames._HUM_RECEIVE_GI}");
+            $"{LightKeywordNames._HT_RECEIVE_GI}");
 
         public static readonly GUIContent GIColorWeight = EditorGUIUtility.TrTextContent(
             "Weight",

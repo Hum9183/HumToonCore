@@ -13,21 +13,21 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
     public class ShadeKeywords
     {
         // Shade Mode
-        private bool _HUM_SHADE_MODE_POS_AND_BLUR;
-        private bool _HUM_SHADE_MODE_RAMP;
+        private bool _HT_SHADE_MODE_POS_AND_BLUR;
+        private bool _HT_SHADE_MODE_RAMP;
 
         // Pos And Blur
-        private bool _HUM_USE_FIRST_SHADE;
-        private bool _HUM_USE_FIRST_SHADE_MAP;
-        private bool _HUM_USE_EX_FIRST_SHADE;
-        private bool _HUM_USE_SECOND_SHADE;
-        private bool _HUM_USE_SECOND_SHADE_MAP;
+        private bool _HT_USE_FIRST_SHADE;
+        private bool _HT_USE_FIRST_SHADE_MAP;
+        private bool _HT_USE_EX_FIRST_SHADE;
+        private bool _HT_USE_SECOND_SHADE;
+        private bool _HT_USE_SECOND_SHADE_MAP;
 
         // Ramp
-        private bool _HUM_USE_RAMP_SHADE;
+        private bool _HT_USE_RAMP_SHADE;
 
         // Control Map
-        private bool _HUM_USE_SHADE_CONTROL_MAP;
+        private bool _HT_USE_SHADE_CONTROL_MAP;
 
         public void Setup(Material material)
         {
@@ -42,11 +42,11 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
             switch (shadeMode)
             {
                 case ShadeMode.PosAndBlur:
-                    _HUM_SHADE_MODE_POS_AND_BLUR = true;
+                    _HT_SHADE_MODE_POS_AND_BLUR = true;
                     SetupPosAndBlur();
                     break;
                 case ShadeMode.Ramp:
-                    _HUM_SHADE_MODE_RAMP = true;
+                    _HT_SHADE_MODE_RAMP = true;
                     SetupRamp();
                     break;
                 default:
@@ -57,18 +57,18 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
 
             void SetupPosAndBlur()
             {
-                _HUM_USE_FIRST_SHADE = material.GetFloat(ID.UseFirstShade).ToBool();
-                _HUM_USE_FIRST_SHADE_MAP = material.GetTexture(ID.FirstShadeMap) is not null;
-                _HUM_USE_EX_FIRST_SHADE = material.GetFloat(ID.UseExFirstShade).ToBool() && _HUM_USE_FIRST_SHADE;
-                _HUM_USE_SECOND_SHADE = material.GetFloat(ID.UseSecondShade).ToBool();
-                _HUM_USE_SECOND_SHADE_MAP = material.GetTexture(ID.SecondShadeMap) is not null;
+                _HT_USE_FIRST_SHADE = material.GetFloat(ID.UseFirstShade).ToBool();
+                _HT_USE_FIRST_SHADE_MAP = material.GetTexture(ID.FirstShadeMap) is not null;
+                _HT_USE_EX_FIRST_SHADE = material.GetFloat(ID.UseExFirstShade).ToBool() && _HT_USE_FIRST_SHADE;
+                _HT_USE_SECOND_SHADE = material.GetFloat(ID.UseSecondShade).ToBool();
+                _HT_USE_SECOND_SHADE_MAP = material.GetTexture(ID.SecondShadeMap) is not null;
             }
 
             void SetupRamp()
             {
                 bool useRampShade = material.GetFloat(ID.UseRampShade).ToBool();
                 bool rampShadeMapExists = material.GetTexture(ID.RampShadeMap) is not null;
-                _HUM_USE_RAMP_SHADE = useRampShade && rampShadeMapExists;
+                _HT_USE_RAMP_SHADE = useRampShade && rampShadeMapExists;
             }
         }
 
@@ -76,8 +76,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
         {
             bool useShadeControlMap = material.GetFloat(ID.UseShadeControlMap).ToBool();
             bool shadeControlMapExists = material.GetTexture(ID.ShadeControlMap) is not null;
-            bool isAtLeastOneShadeValid = _HUM_USE_FIRST_SHADE || _HUM_USE_SECOND_SHADE || _HUM_USE_RAMP_SHADE;
-            _HUM_USE_SHADE_CONTROL_MAP = useShadeControlMap && shadeControlMapExists && isAtLeastOneShadeValid;
+            bool isAtLeastOneShadeValid = _HT_USE_FIRST_SHADE || _HT_USE_SECOND_SHADE || _HT_USE_RAMP_SHADE;
+            _HT_USE_SHADE_CONTROL_MAP = useShadeControlMap && shadeControlMapExists && isAtLeastOneShadeValid;
         }
 
         public void SetToMaterial(Material material)

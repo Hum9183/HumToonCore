@@ -18,10 +18,10 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.RimLight
         private void SetKeywords(Material material)
         {
             bool useRimLight = material.GetFloat(IDUseRimLight).ToBool();
-            CoreUtils.SetKeyword(material, RimLightKeywordNames._HUM_USE_RIM_LIGHT, useRimLight);
+            CoreUtils.SetKeyword(material, RimLightKeywordNames._HT_USE_RIM_LIGHT, useRimLight);
 
             bool rimLightMapExists = material.GetTexture(IDRimLightMap) is not null;
-            CoreUtils.SetKeyword(material, RimLightKeywordNames._HUM_USE_RIM_LIGHT_MAP, rimLightMapExists && useRimLight);
+            CoreUtils.SetKeyword(material, RimLightKeywordNames._HT_USE_RIM_LIGHT_MAP, rimLightMapExists && useRimLight);
         }
     }
 }

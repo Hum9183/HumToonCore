@@ -20,7 +20,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Emission
                      $"{nameof(P.UseEmission).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{EmissionKeywordNames._HUM_USE_EMISSION}");
+                     $"{EmissionKeywordNames._HT_USE_EMISSION}");
 
         public static readonly GUIContent EmissionMap = EditorGUIUtility.TrTextContent(
             text: "Emission Map (RGB)",
@@ -29,7 +29,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Emission
                      $"{nameof(P.EmissionColor).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{EmissionKeywordNames._HUM_USE_EMISSION_MAP}");
+                     $"{EmissionKeywordNames._HT_USE_EMISSION_MAP}");
 
         public static readonly GUIContent EmissionIntensity = EditorGUIUtility.TrTextContent(
             text: "Intensity",
@@ -57,6 +57,6 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Emission
                      $"{nameof(P.OverrideEmissionColor).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{EmissionKeywordNames._HUM_OVERRIDE_EMISSION_COLOR}");
+                     $"{EmissionKeywordNames._HT_OVERRIDE_EMISSION_COLOR}");
     }
 }

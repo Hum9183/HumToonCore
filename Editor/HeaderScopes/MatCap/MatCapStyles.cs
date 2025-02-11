@@ -20,7 +20,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.MatCap
                      $"{nameof(P.UseMatCap).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{MatCapKeywordNames._HUM_USE_MAT_CAP}");
+                     $"{MatCapKeywordNames._HT_USE_MAT_CAP}");
 
         public static readonly GUIContent MatCapMap = EditorGUIUtility.TrTextContent(
             text: "Mat Cap Map (RGB)",
@@ -60,7 +60,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.MatCap
                      $"{nameof(P.MatCapMaskIntensity).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{MatCapKeywordNames._HUM_USE_MAT_CAP_MASK}");
+                     $"{MatCapKeywordNames._HT_USE_MAT_CAP_MASK}");
 
         public static readonly GUIContent MatCapMainLightEffectiveness = EditorGUIUtility.TrTextContent(
             text: "Main Light Effectiveness",

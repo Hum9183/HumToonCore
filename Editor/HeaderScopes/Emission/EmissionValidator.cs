@@ -19,13 +19,13 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Emission
         private void SetKeywords(Material material)
         {
             bool useEmission = material.GetFloat(IDUseEmission).ToBool();
-            CoreUtils.SetKeyword(material, EmissionKeywordNames._HUM_USE_EMISSION, useEmission);
+            CoreUtils.SetKeyword(material, EmissionKeywordNames._HT_USE_EMISSION, useEmission);
 
             bool emissionMapExists = material.GetTexture(IDEmissionMap) is not null;
-            CoreUtils.SetKeyword(material, EmissionKeywordNames._HUM_USE_EMISSION_MAP, emissionMapExists && useEmission);
+            CoreUtils.SetKeyword(material, EmissionKeywordNames._HT_USE_EMISSION_MAP, emissionMapExists && useEmission);
 
             bool overrideEmissionColor = material.GetFloat(IDOverrideEmissionColor).ToBool();
-            CoreUtils.SetKeyword(material, EmissionKeywordNames._HUM_OVERRIDE_EMISSION_COLOR, overrideEmissionColor && useEmission);
+            CoreUtils.SetKeyword(material, EmissionKeywordNames._HT_OVERRIDE_EMISSION_COLOR, overrideEmissionColor && useEmission);
         }
     }
 }

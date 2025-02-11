@@ -18,10 +18,10 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         private void SetKeywords(Material material)
         {
             bool useMainLightCookieAsShade = material.GetFloat(IDUseMainLightCookieAsShade).ToBool();
-            CoreUtils.SetKeyword(material, LightKeywordNames._HUM_USE_MAIN_LIGHT_COOKIE_AS_SHADE, useMainLightCookieAsShade);
+            CoreUtils.SetKeyword(material, LightKeywordNames._HT_USE_MAIN_LIGHT_COOKIE_AS_SHADE, useMainLightCookieAsShade);
 
             bool receiveGI = material.GetFloat(IDReceiveGI).ToBool();
-            CoreUtils.SetKeyword(material, LightKeywordNames._HUM_RECEIVE_GI, receiveGI);
+            CoreUtils.SetKeyword(material, LightKeywordNames._HT_RECEIVE_GI, receiveGI);
         }
     }
 }

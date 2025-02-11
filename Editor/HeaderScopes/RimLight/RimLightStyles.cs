@@ -20,7 +20,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.RimLight
                      $"{nameof(P.UseRimLight).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{RimLightKeywordNames._HUM_USE_RIM_LIGHT}");
+                     $"{RimLightKeywordNames._HT_USE_RIM_LIGHT}");
 
         public static readonly GUIContent RimLightMap = EditorGUIUtility.TrTextContent(
             text: "Rim Light Map (RGB)",
@@ -29,7 +29,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.RimLight
                      $"{nameof(P.RimLightColor).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{RimLightKeywordNames._HUM_USE_RIM_LIGHT_MAP}");
+                     $"{RimLightKeywordNames._HT_USE_RIM_LIGHT_MAP}");
 
         public static readonly GUIContent RimLightIntensity = EditorGUIUtility.TrTextContent(
             text: "Intensity",

@@ -20,10 +20,10 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.MatCap
         {
             bool useMatCap = material.GetFloat(IDUseMatCap).ToBool();
             bool matCapMapExists = material.GetTexture(IDMatCapMap) is not null;
-            CoreUtils.SetKeyword(material, MatCapKeywordNames._HUM_USE_MAT_CAP, useMatCap && matCapMapExists);
+            CoreUtils.SetKeyword(material, MatCapKeywordNames._HT_USE_MAT_CAP, useMatCap && matCapMapExists);
 
             bool matCapMaskExists = material.GetTexture(IDMatCapMask) is not null;
-            CoreUtils.SetKeyword(material, MatCapKeywordNames._HUM_USE_MAT_CAP_MASK, useMatCap && matCapMapExists && matCapMaskExists);
+            CoreUtils.SetKeyword(material, MatCapKeywordNames._HT_USE_MAT_CAP_MASK, useMatCap && matCapMapExists && matCapMaskExists);
         }
     }
 }

@@ -24,8 +24,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.ShadeMode).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keywords}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_SHADE_MODE_POS_AND_BLUR}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_SHADE_MODE_RAMP}");
+                     $"{ShadeKeywordNames._HT_SHADE_MODE_POS_AND_BLUR}{C.Ln}" +
+                     $"{ShadeKeywordNames._HT_SHADE_MODE_RAMP}");
 
         // Pos And Blur
 
@@ -35,7 +35,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.UseFirstShade).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_FIRST_SHADE}");
+                     $"{ShadeKeywordNames._HT_USE_FIRST_SHADE}");
 
         public static readonly GUIContent FirstShadeMap = EditorGUIUtility.TrTextContent(
             text: $"First Shade Map {C.ColorChannelRbg}",
@@ -47,7 +47,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.FirstShadeColor).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_FIRST_SHADE_MAP}");
+                     $"{ShadeKeywordNames._HT_USE_FIRST_SHADE_MAP}");
 
         public static readonly GUIContent FirstShadeBorderPos = EditorGUIUtility.TrTextContent(
             text: "Border Pos",
@@ -65,7 +65,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.UseExFirstShade).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_EX_FIRST_SHADE}");
+                     $"{ShadeKeywordNames._HT_USE_EX_FIRST_SHADE}");
 
         public static readonly GUIContent ExFirstShadeColor = EditorGUIUtility.TrTextContent(
             text: "Ex Color",
@@ -83,7 +83,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.UseSecondShade).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_SECOND_SHADE}");
+                     $"{ShadeKeywordNames._HT_USE_SECOND_SHADE}");
 
         public static readonly GUIContent SecondShadeMap = EditorGUIUtility.TrTextContent(
             text: $"Second Shade Map {C.ColorChannelRbg}",
@@ -95,7 +95,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                       $"{nameof(P.SecondShadeColor).Prefix()}{C.Ln}" +
                       $"{C.Ln}" +
                       $"{C.Keyword}{C.Ln}" +
-                      $"{ShadeKeywordNames._HUM_USE_SECOND_SHADE_MAP}");
+                      $"{ShadeKeywordNames._HT_USE_SECOND_SHADE_MAP}");
 
         public static readonly GUIContent SecondShadeBorderPos = EditorGUIUtility.TrTextContent(
             text: "Border Pos",
@@ -115,7 +115,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.UseRampShade).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_RAMP_SHADE}");
+                     $"{ShadeKeywordNames._HT_USE_RAMP_SHADE}");
 
         public static readonly GUIContent RampShadeMap = EditorGUIUtility.TrTextContent(
             text: "Ramp Shade Map (RGB)",
@@ -130,7 +130,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                      $"{nameof(P.UseShadeControlMap).Prefix()}{C.Ln}" +
                      $"{C.Ln}" +
                      $"{C.Keyword}{C.Ln}" +
-                     $"{ShadeKeywordNames._HUM_USE_SHADE_CONTROL_MAP}");
+                     $"{ShadeKeywordNames._HT_USE_SHADE_CONTROL_MAP}");
 
         public static readonly GUIContent ShadeControlMap = EditorGUIUtility.TrTextContent(
             text: $"Shade Control Map {C.ColorChannelR}",
