@@ -42,6 +42,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                     materialEditor.ShaderProperty(PropContainer.FirstShadeBorderPos, ShadeStyles.FirstShadeBorderPos);
                     materialEditor.ShaderProperty(PropContainer.FirstShadeBorderBlur, ShadeStyles.FirstShadeBorderBlur);
 
+                #if false // 影の中に入ったときにおかしくなるため一旦塞ぐ。　TODO: FakeSSSとして改めて実装し直す
                     bool useExFirstShade = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseExFirstShade, ShadeStyles.UseExFirstShade);
                     if (useExFirstShade)
                     {
@@ -51,6 +52,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
                             materialEditor.ShaderProperty(PropContainer.ExFirstShadeWidth, ShadeStyles.ExFirstShadeWidth);
                         }
                     }
+                #endif
                 }
                 HumToonGUIUtils.Space();
             }

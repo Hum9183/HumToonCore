@@ -59,7 +59,11 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Shade
             {
                 _HT_USE_FIRST_SHADE = material.GetFloat(ID.UseFirstShade).ToBool();
                 _HT_USE_FIRST_SHADE_MAP = material.GetTexture(ID.FirstShadeMap) is not null;
+            #if false // 影の中に入ったときにおかしくなるため一旦塞ぐ。　TODO: FakeSSSとして改めて実装し直す
                 _HT_USE_EX_FIRST_SHADE = material.GetFloat(ID.UseExFirstShade).ToBool() && _HT_USE_FIRST_SHADE;
+            #else
+                _HT_USE_EX_FIRST_SHADE = false;
+            #endif
                 _HT_USE_SECOND_SHADE = material.GetFloat(ID.UseSecondShade).ToBool();
                 _HT_USE_SECOND_SHADE_MAP = material.GetTexture(ID.SecondShadeMap) is not null;
             }
