@@ -14,6 +14,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         public MaterialProperty UseMainLightSpecular;
         public MaterialProperty MainLightSpecularIntensity;
         public MaterialProperty AdditionalLightsColorWeight;
+        public MaterialProperty UseAdditionalLightsSpecular;
+        public MaterialProperty AdditionalLightsSpecularIntensity;
         public MaterialProperty GIColorWeight;
         public MaterialProperty ReceiveGI;
     }

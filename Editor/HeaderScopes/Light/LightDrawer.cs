@@ -49,6 +49,15 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             using (new EditorGUI.IndentLevelScope())
             {
                 materialEditor.ShaderProperty(PropContainer.AdditionalLightsColorWeight, LightStyles.AdditionalLightsColorWeight);
+
+                var useAdditionalLightsSpecular = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseAdditionalLightsSpecular, LightStyles.UseAdditionalLightsSpecular);
+                if (useAdditionalLightsSpecular)
+                {
+                    using (new EditorGUI.IndentLevelScope())
+                    {
+                        materialEditor.ShaderProperty(PropContainer.AdditionalLightsSpecularIntensity, LightStyles.AdditionalLightsSpecularIntensity);
+                    }
+                }
             }
         }
 

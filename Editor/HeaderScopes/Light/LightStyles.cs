@@ -58,6 +58,19 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             tooltip: $"{C.Property}{C.Ln}" +
                      $"{nameof(P.AdditionalLightsColorWeight).Prefix()}");
 
+        public static readonly GUIContent UseAdditionalLightsSpecular = EditorGUIUtility.TrTextContent(
+            text: "Use Specular",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(P.UseAdditionalLightsSpecular).Prefix()}{C.Ln}" +
+                     $"{C.Ln}" +
+                     $"{C.Keyword}{C.Ln}" +
+                     $"{LightKeywordNames._HT_USE_ADDITIONAL_LIGHTS_SPECULAR}");
+
+        public static readonly GUIContent AdditionalLightsSpecularIntensity = EditorGUIUtility.TrTextContent(
+            "Intensity",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.AdditionalLightsSpecularIntensity).Prefix()}");
+
         public static readonly GUIContent ReceiveGI = EditorGUIUtility.TrTextContent(
             "Receive GI",
             $"{C.Property}{C.Ln}" +
