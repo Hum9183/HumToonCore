@@ -48,6 +48,15 @@ namespace Hum.HumToonCore.Editor.Utils
             return newValue;
         }
 
+        public static bool GetFloatToggleProperty(MaterialProperty matProp)
+        {
+            // TODO: showMixedValue
+            if (matProp == null)
+                throw new ArgumentNullException(nameof(matProp));
+
+            return matProp.floatValue.IsOne();
+        }
+
         public static Rect GetControlRectForSingleLine() => EditorGUILayout.GetControlRect(true, 20f, EditorStyles.layerMaskField);
 
         public static (bool, float) FloatToggleAndRangePropertiesSingleLine(

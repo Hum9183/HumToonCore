@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Hum.HumToonCore.Editor.HeaderScopes.Base;
 using Hum.HumToonCore.Editor.HeaderScopes.Emission;
-using Hum.HumToonCore.Editor.HeaderScopes.Light;
+using Hum.HumToonCore.Editor.HeaderScopes.DirectLighting;
+using Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting;
 using Hum.HumToonCore.Editor.HeaderScopes.MatCap;
 using Hum.HumToonCore.Editor.HeaderScopes.Normal;
 using Hum.HumToonCore.Editor.HeaderScopes.RimLight;
@@ -44,7 +45,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 (CreateRimLightDrawer(), new RimLightValidator()),
                 (CreateEmissionDrawer(), new EmissionValidator()),
                 (CreateMatCapDrawer(), new MatCapValidator()),
-                (CreateLightDrawer(), new LightValidator()),
+                (CreateDirectLightingDrawer(), new DirectLightingValidator()),
+                (CreateIndirectLightingDrawer(), new IndirectLightingValidator()),
             };
         }
 
@@ -104,12 +106,20 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 Convert.ToUInt32(Expandable.MatCap));
         }
 
-        private LightDrawer CreateLightDrawer()
+        private DirectLightingDrawer CreateDirectLightingDrawer()
         {
-            return new LightDrawer(
-                new LightPropertiesContainer(),
-                () => LightStyles.LightFoldout,
-                Convert.ToUInt32(Expandable.Light));
+            return new DirectLightingDrawer(
+                new DirectLightingPropertiesContainer(),
+                () => DirectLightingtyles.DirectLightingFoldout,
+                Convert.ToUInt32(Expandable.DirectLighting));
+        }
+
+        private IndirectLightingDrawer CreateIndirectLightingDrawer()
+        {
+            return new IndirectLightingDrawer(
+                new IndirectLightingPropertiesContainer(),
+                () => IndirectLightingtyles.IndirectLightingFoldout,
+                Convert.ToUInt32(Expandable.IndirectLighting));
         }
     }
 }
