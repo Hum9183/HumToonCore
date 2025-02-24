@@ -11,6 +11,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         private static readonly int IDUseMainLightSpecular = Shader.PropertyToID(nameof(P.UseMainLightSpecular).Prefix());
         private static readonly int IDUseAdditionalLightsSpecular = Shader.PropertyToID(nameof(P.UseAdditionalLightsSpecular).Prefix());
         private static readonly int IDReceiveGI = Shader.PropertyToID(nameof(P.ReceiveGI).Prefix());
+        private static readonly int IDUseSsao = Shader.PropertyToID(nameof(P.UseSsao).Prefix());
 
         public void Validate(Material material)
         {
@@ -30,6 +31,9 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
 
             bool receiveGI = material.GetFloat(IDReceiveGI).ToBool();
             CoreUtils.SetKeyword(material, LightKeywordNames._HT_RECEIVE_GI, receiveGI);
+
+            bool useSSAO = material.GetFloat(IDUseSsao).ToBool();
+            CoreUtils.SetKeyword(material, LightKeywordNames._HT_USE_SSAO, useSSAO);
         }
     }
 }

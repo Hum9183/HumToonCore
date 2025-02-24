@@ -7,5 +7,6 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
         public static readonly string _HT_USE_MAIN_LIGHT_SPECULAR = nameof(_HT_USE_MAIN_LIGHT_SPECULAR);
         public static readonly string _HT_USE_ADDITIONAL_LIGHTS_SPECULAR = nameof(_HT_USE_ADDITIONAL_LIGHTS_SPECULAR);
         public static readonly string _HT_RECEIVE_GI = nameof(_HT_RECEIVE_GI);
+        public static readonly string _HT_USE_SSAO = nameof(_HT_USE_SSAO);
     }
 }

@@ -83,5 +83,18 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             "Weight",
             $"{C.Property}{C.Ln}" +
             $"{nameof(P.GIColorWeight).Prefix()}");
+
+        public static readonly GUIContent UseSsao = EditorGUIUtility.TrTextContent(
+            "Use SSAO",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.UseSsao).Prefix()}{C.Ln}" +
+            $"{C.Ln}" +
+            $"{C.Keyword}{C.Ln}" +
+            $"{LightKeywordNames._HT_USE_SSAO}");
+
+        public static readonly GUIContent SsaoWeight = EditorGUIUtility.TrTextContent(
+            "Weight",
+            $"{C.Property}{C.Ln}" +
+            $"{nameof(P.SsaoWeight).Prefix()}");
     }
 }

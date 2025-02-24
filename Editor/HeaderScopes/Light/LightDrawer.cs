@@ -20,6 +20,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
             DrawAdditionalLights(materialEditor);
             HumToonGUIUtils.Space();
             DrawGI(materialEditor);
+            HumToonGUIUtils.Space();
+            DrawSsao(materialEditor);
         }
 
         private void DrawMainLight(MaterialEditor materialEditor)
@@ -72,6 +74,22 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.Light
                     using (new EditorGUI.IndentLevelScope())
                     {
                         materialEditor.ShaderProperty(PropContainer.GIColorWeight, LightStyles.GIColorWeight);
+                    }
+                }
+            }
+        }
+
+        private void DrawSsao(MaterialEditor materialEditor)
+        {
+            EditorGUILayout.LabelField(L.Select(new[] { "SSAO", "SSAO", "SSAO" }), EditorStyles.boldLabel);
+            using (new EditorGUI.IndentLevelScope())
+            {
+                var useSsao = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseSsao, LightStyles.UseSsao);
+                if (useSsao)
+                {
+                    using (new EditorGUI.IndentLevelScope())
+                    {
+                        materialEditor.ShaderProperty(PropContainer.SsaoWeight, LightStyles.SsaoWeight);
                     }
                 }
             }
