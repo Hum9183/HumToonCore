@@ -10,12 +10,13 @@ namespace Hum.HumToonCore.Editor.Utils
     {
         SurfaceOptions = 1 << 0,
         Base = 1 << 1,
-        Normal = 1 << 2,
-        Shade = 1 << 3,
-        RimLight = 1 << 4,
-        Emission = 1 << 5,
-        MatCap = 1 << 6,
-        DirectLighting = 1 << 7,
-        IndirectLighting = 1 << 8,
+        PbrParameters = 1 << 2,
+        Normal = 1 << 3,
+        Shade = 1 << 4,
+        RimLight = 1 << 5,
+        Emission = 1 << 6,
+        MatCap = 1 << 7,
+        DirectLighting = 1 << 8,
+        IndirectLighting = 1 << 9,
     }
 }

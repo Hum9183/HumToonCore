@@ -7,6 +7,7 @@ using Hum.HumToonCore.Editor.HeaderScopes.DirectLighting;
 using Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting;
 using Hum.HumToonCore.Editor.HeaderScopes.MatCap;
 using Hum.HumToonCore.Editor.HeaderScopes.Normal;
+using Hum.HumToonCore.Editor.HeaderScopes.PbrParameters;
 using Hum.HumToonCore.Editor.HeaderScopes.RimLight;
 using Hum.HumToonCore.Editor.HeaderScopes.Shade;
 using Hum.HumToonCore.Editor.HeaderScopes.SurfaceOptions;
@@ -40,6 +41,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
             {
                 (CreateSurfaceOptionsDrawer(), new SurfaceOptionsValidator()),
                 (CreateBaseDrawer(), null),
+                (CreatePbrParametersDrawer(), null),
                 (CreateNormalDrawer(), new NormalValidator()),
                 (CreateShadeDrawer(), new ShadeValidator()),
                 (CreateRimLightDrawer(), new RimLightValidator()),
@@ -64,6 +66,14 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 new BasePropertiesContainer(),
                 () => BaseStyles.SurfaceInputsFoldout,
                 Convert.ToUInt32(Expandable.Base));
+        }
+
+        private PbrParametersDrawer CreatePbrParametersDrawer()
+        {
+            return new PbrParametersDrawer(
+                new PbrParametersPropertiesContainer(),
+                () => PbrParametersStyles.PbrParametersFoldout,
+                Convert.ToUInt32(Expandable.PbrParameters));
         }
 
         private NormalDrawer CreateNormalDrawer()
