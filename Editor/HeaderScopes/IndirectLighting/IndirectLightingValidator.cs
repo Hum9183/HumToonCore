@@ -9,6 +9,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting
         private static readonly int IDReceiveIndirectDiffuse = Shader.PropertyToID(nameof(IndirectLightingPropertiesContainer.ReceiveIndirectDiffuse).Prefix());
         private static readonly int IDReceiveIndirectSpecular = Shader.PropertyToID(nameof(IndirectLightingPropertiesContainer.ReceiveIndirectSpecular).Prefix());
         private static readonly int IDReceiveSsao = Shader.PropertyToID(nameof(IndirectLightingPropertiesContainer.ReceiveSsao).Prefix());
+        private static readonly int IDUseSsaoMask = Shader.PropertyToID(nameof(IndirectLightingPropertiesContainer.UseSsaoMask).Prefix());
 
         public void Validate(Material material)
         {
@@ -24,6 +25,10 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting
             CoreUtils.SetKeyword(material, IndirectLightingKeywordNames._HT_RECEIVE_INDIRECT_SPECULAR, receiveIndirectSpecular);
 
             bool receiveSsao = material.GetFloat(IDReceiveSsao).ToBool();
-            CoreUtils.SetKeyword(material, IndirectLightingKeywordNames._HT_RECEIVE_SSAO, receiveSsao); }
+            CoreUtils.SetKeyword(material, IndirectLightingKeywordNames._HT_RECEIVE_SSAO, receiveSsao);
+
+            bool useSsaoMask = material.GetFloat(IDUseSsaoMask).ToBool();
+            CoreUtils.SetKeyword(material, IndirectLightingKeywordNames._HT_USE_SSAO_MASK, useSsaoMask);
+        }
     }
 }

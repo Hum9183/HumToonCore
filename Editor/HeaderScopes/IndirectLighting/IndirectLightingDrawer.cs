@@ -61,6 +61,19 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting
                 if (receiveSsao)
                 {
                     materialEditor.ShaderProperty(PropContainer.SsaoIntensity, IndirectLightingtyles.SsaoIntensity);
+
+                    var useSsaoMask = HumToonGUIUtils.DrawFloatToggleProperty(PropContainer.UseSsaoMask, IndirectLightingtyles.UseSsaoMask);
+                    if (useSsaoMask)
+                    {
+                        using (new EditorGUI.IndentLevelScope())
+                        {
+                            HumToonGUIUtils.TextureAndRangePropertiesSingleLine(
+                                materialEditor, 
+                                PropContainer.SsaoMask, 
+                                PropContainer.SsaoMaskIntensity, 
+                                IndirectLightingtyles.SsaoMask);
+                        }
+                    }
                 }
             }
         }

@@ -12,5 +12,8 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting
         public MaterialProperty IndirectSpecularIntensity;
         public MaterialProperty ReceiveSsao;
         public MaterialProperty SsaoIntensity;
+        public MaterialProperty UseSsaoMask;
+        public MaterialProperty SsaoMask;
+        public MaterialProperty SsaoMaskIntensity;
     }
 }

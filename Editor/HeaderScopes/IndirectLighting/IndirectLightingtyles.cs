@@ -57,5 +57,23 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting
             text: "Intensity",
             tooltip: $"{C.Property}{C.Ln}" +
                      $"{nameof(IndirectLightingPropertiesContainer.SsaoIntensity).Prefix()}");
+
+        public static readonly GUIContent UseSsaoMask = EditorGUIUtility.TrTextContent(
+            text: "Use SSAO Mask",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(IndirectLightingPropertiesContainer.UseSsaoMask).Prefix()}{C.Ln}" +
+                     $"{C.Ln}" +
+                     $"{C.Keyword}{C.Ln}" +
+                     $"{IndirectLightingKeywordNames._HT_USE_SSAO_MASK}");
+
+        public static readonly GUIContent SsaoMask = EditorGUIUtility.TrTextContent(
+            text: "SSAO Mask",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(IndirectLightingPropertiesContainer.SsaoMask).Prefix()}");
+
+        public static readonly GUIContent SsaoMaskIntensity = EditorGUIUtility.TrTextContent(
+            text: "Intensity",
+            tooltip: $"{C.Property}{C.Ln}" +
+                     $"{nameof(IndirectLightingPropertiesContainer.SsaoMaskIntensity).Prefix()}");
     }
 }
