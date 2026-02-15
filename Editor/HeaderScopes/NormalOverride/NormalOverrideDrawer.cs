@@ -19,9 +19,12 @@ namespace Hum.HumToonCore.Editor.HeaderScopes.NormalOverride
             {
                 using (new EditorGUI.IndentLevelScope())
                 {
-                    materialEditor.TexturePropertySingleLine(NormalOverrideStyles.NormalOverrideMask, PropContainer.NormalOverrideMask);
+                    HumToonGUIUtils.TextureAndRangePropertiesSingleLine(
+                        materialEditor,
+                        PropContainer.NormalOverrideMask,
+                        PropContainer.NormalOverrideIntensity,
+                        NormalOverrideStyles.NormalOverrideMask);
                     HumToonGUIUtils.DrawFloat3Property(PropContainer.NormalOverrideDirection, NormalOverrideStyles.NormalOverrideDirection);
-                    materialEditor.ShaderProperty(PropContainer.NormalOverrideIntensity, NormalOverrideStyles.NormalOverrideIntensity);
                 }
             }
         }
