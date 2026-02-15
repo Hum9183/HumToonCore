@@ -213,5 +213,28 @@ namespace Hum.HumToonCore.Editor.Utils
         {
             EditorGUI.DrawRect(EditorGUILayout.GetControlRect(false, height), new Color(1.0f,1.0f,1.0f,0.0f));
         }
+
+        /// <summary>
+        /// Draw Float3 property for a Vector4 MaterialProperty (W component is always 0)
+        /// </summary>
+        public static Vector3 DrawFloat3Property(MaterialProperty matProp, GUIContent label)
+        {
+            if (matProp == null)
+                throw new ArgumentNullException(nameof(matProp));
+
+            Vector4 vec4 = matProp.vectorValue;
+            Vector3 vec3 = new Vector3(vec4.x, vec4.y, vec4.z);
+
+            using var changeCheckScope = new EditorGUI.ChangeCheckScope();
+            MaterialEditor.BeginProperty(matProp);
+            vec3 = EditorGUILayout.Vector3Field(label, vec3);
+            if (changeCheckScope.changed)
+            {
+                matProp.vectorValue = new Vector4(vec3.x, vec3.y, vec3.z, 0);
+            }
+            MaterialEditor.EndProperty();
+
+            return vec3;
+        }
     }
 }

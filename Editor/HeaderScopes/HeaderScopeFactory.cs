@@ -6,6 +6,7 @@ using Hum.HumToonCore.Editor.HeaderScopes.Emission;
 using Hum.HumToonCore.Editor.HeaderScopes.DirectLighting;
 using Hum.HumToonCore.Editor.HeaderScopes.IndirectLighting;
 using Hum.HumToonCore.Editor.HeaderScopes.MatCap;
+using Hum.HumToonCore.Editor.HeaderScopes.NormalOverride;
 using Hum.HumToonCore.Editor.HeaderScopes.Normal;
 using Hum.HumToonCore.Editor.HeaderScopes.PbrParameters;
 using Hum.HumToonCore.Editor.HeaderScopes.RimLight;
@@ -47,6 +48,7 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 (CreateRimLightDrawer(), new RimLightValidator()),
                 (CreateEmissionDrawer(), new EmissionValidator()),
                 (CreateMatCapDrawer(), new MatCapValidator()),
+                (CreateNormalOverrideDrawer(), new NormalOverrideValidator()),
                 (CreateDirectLightingDrawer(), new DirectLightingValidator()),
                 (CreateIndirectLightingDrawer(), new IndirectLightingValidator()),
             };
@@ -114,6 +116,14 @@ namespace Hum.HumToonCore.Editor.HeaderScopes
                 new MatCapPropertiesContainer(),
                 () => MatCapStyles.MatCapFoldout,
                 Convert.ToUInt32(Expandable.MatCap));
+        }
+
+        private NormalOverrideDrawer CreateNormalOverrideDrawer()
+        {
+            return new NormalOverrideDrawer(
+                new NormalOverridePropertiesContainer(),
+                () => NormalOverrideStyles.NormalOverrideFoldout,
+                Convert.ToUInt32(Expandable.NormalOverride));
         }
 
         private DirectLightingDrawer CreateDirectLightingDrawer()

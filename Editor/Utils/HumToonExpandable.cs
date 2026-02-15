@@ -16,7 +16,8 @@ namespace Hum.HumToonCore.Editor.Utils
         RimLight = 1 << 5,
         Emission = 1 << 6,
         MatCap = 1 << 7,
-        DirectLighting = 1 << 8,
-        IndirectLighting = 1 << 9,
+        NormalOverride = 1 << 8,
+        DirectLighting = 1 << 9,
+        IndirectLighting = 1 << 10,
     }
 }
